@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Minha Aplicação',
       theme: ThemeData(
         colorScheme:
-            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 4, 76, 7)),
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 0, 1, 75)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Minha aplicação Flutter'),
