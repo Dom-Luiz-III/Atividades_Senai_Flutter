@@ -43,6 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () {
             final snackBar = SnackBar(
               content: Text('Olá, mundo!'),
+              action: SnackBarAction(
+                  label: 'Fechar',
+                  onPressed: () {
+                    // Num rola nada e ele só fecha msm
+                  }),
             );
             ScaffoldMessenger.of(context).showSnackBar(snackBar);
           },
