@@ -12,7 +12,6 @@ class MeuApp extends StatelessWidget {
     return MaterialApp(
       title: 'Teste Arquivos separados',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
       ),
       home: HomePage(),
       routes: {
