@@ -33,6 +33,27 @@ class CarroScreen extends StatelessWidget {
             CarroWidget(Carro('Uno', 'FIAT', 2016)),
             CarroWidget(Carro('Onix', 'Chevrolet', 2018)),
             CarroWidget(Carro('Toro', 'FIAT', 2023)),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 100, // Defina a largura desejada
+                  height: 100, // Defina a altura desejada
+                  child: Image.asset('lib/images/uno.jpg'),
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  child: Image.asset('lib/images/corolla.jpg'),
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  child: Image.asset('lib/images/toro.webp'),
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -53,26 +74,31 @@ class CarroWidget extends StatelessWidget {
           Text('Marca: ${carro.marca}'),
           Text('Modelo: ${carro.modelo}'),
           Text('Ano: ${carro.ano}'),
-          
-          SizedBox(width: 120),
-          SizedBox(height: 25),
-          ElevatedButton(
-            onPressed: () {
-              final snackBar = SnackBar(
-                content: Text('O ${carro.marca} ${carro.modelo} está acelerando!'),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            },
-            child: Text('Acelerar'),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 16),
+            child: ElevatedButton(
+              onPressed: () {
+                final snackBar = SnackBar(
+                  content:
+                      Text('O ${carro.marca} ${carro.modelo} está acelerando!'),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+              child: Text('Acelerar'),
+            ),
           ),
-          ElevatedButton(
-            onPressed: () {
-              final snackBar = SnackBar(
-                content: Text('O ${carro.marca} ${carro.modelo} está freando!'),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            },
-            child: Text('Frear'),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 2),
+            child: ElevatedButton(
+              onPressed: () {
+                final snackBar = SnackBar(
+                  content:
+                      Text('O ${carro.marca} ${carro.modelo} está freando!'),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+              child: Text('Frear'),
+            ),
           ),
         ],
       ),
