@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/exemplo_atividade/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/exemplo_atividade/build" />
+      <excludeFolder url="file://$MODULE_DIR$/exemplo_atividade/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/aula_4/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/aula_4/build" />
+      <excludeFolder url="file://$MODULE_DIR$/aula_4/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/teste_paineis/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/teste_paineis/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/teste_paineis/build" />
+      <excludeFolder url="file://$MODULE_DIR$/aula_3/build" />
+      <excludeFolder url="file://$MODULE_DIR$/aula_3/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/aula_3/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_button/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_button/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_button/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/temperatura/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/temperatura/build" />
+      <excludeFolder url="file://$MODULE_DIR$/temperatura/.dart_tool" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
