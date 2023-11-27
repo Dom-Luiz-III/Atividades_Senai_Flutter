@@ -69,12 +69,6 @@ class _PerguntaAppState extends State<PerguntaApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: Colors.white),
-          bodyText2: TextStyle(color: Colors.white),
-        ),
-      ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Perguntas'),
@@ -88,10 +82,13 @@ class _PerguntaAppState extends State<PerguntaApp> {
               ),
             ),
             child: temPerguntaSelecionada
-                ? Questionario(
-                    perguntas: _perguntas,
-                    perguntaSelecionada: _perguntaSelecionada,
-                    quandoResponder: _responder,
+                ? DefaultTextStyle(
+                    style: TextStyle(color: Colors.white),
+                    child: Questionario(
+                      perguntas: _perguntas,
+                      perguntaSelecionada: _perguntaSelecionada,
+                      quandoResponder: _responder,
+                    ),
                   )
                 : Resultado(_pontuacaoTotal, _reiniciarQuestionario),
           ),
