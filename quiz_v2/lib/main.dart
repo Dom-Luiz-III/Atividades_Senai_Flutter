@@ -69,9 +69,15 @@ class _PerguntaAppState extends State<PerguntaApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: TextTheme(
+          bodyText1: TextStyle(color: Colors.white),
+          bodyText2: TextStyle(color: Colors.white),
+        ),
+      ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Perguntas', style: TextStyle(color: Colors.black)),
+          title: const Text('Perguntas'),
         ),
         body: SizedBox.expand(
           child: Container(
