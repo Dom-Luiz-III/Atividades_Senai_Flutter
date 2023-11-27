@@ -28,6 +28,10 @@ class Questionario extends StatelessWidget {
     return Column(
       children: [
         Questao(perguntas[perguntaSelecionada]['texto'] as String),
+
+        // Adicione o SizedBox para criar espaçamento entre a pergunta e os botões
+        SizedBox(height: 10),
+
         ...respostas.map((resp) {
           return Resposta(
             resp['texto'] as String,

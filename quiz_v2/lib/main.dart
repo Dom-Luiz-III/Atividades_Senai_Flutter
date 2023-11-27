@@ -11,9 +11,9 @@ class _PerguntaAppState extends State<PerguntaApp> {
     {
       'texto': 'Qual foi o professor de Linguagem C no SENAI?',
       'respostas': [
-        {'texto': 'Maxuel', 'pontuacao': 1},
-        {'texto': 'Lucas', 'pontuacao': 1},
-        {'texto': 'Ivanildo', 'pontuacao': 1},
+        {'texto': 'Maxuel', 'pontuacao': 0},
+        {'texto': 'Lucas', 'pontuacao': 0},
+        {'texto': 'Ivanildo', 'pontuacao': 0},
         {'texto': 'Phillipe', 'pontuacao': 10},
       ],
     },
@@ -21,27 +21,27 @@ class _PerguntaAppState extends State<PerguntaApp> {
       'texto': 'Qual foi o professor de UML no SENAI?',
       'respostas': [
         {'texto': 'Maxuel', 'pontuacao': 10},
-        {'texto': 'Lucas', 'pontuacao': 1},
-        {'texto': 'Ivanildo', 'pontuacao': 1},
-        {'texto': 'Phillipe', 'pontuacao': 1},
+        {'texto': 'Lucas', 'pontuacao': 0},
+        {'texto': 'Ivanildo', 'pontuacao': 0},
+        {'texto': 'Phillipe', 'pontuacao': 0},
       ],
     },
     {
       'texto': 'Qual foi o professor de Excel no SENAI?',
       'respostas': [
-        {'texto': 'Maxuel', 'pontuacao': 1},
+        {'texto': 'Maxuel', 'pontuacao': 0},
         {'texto': 'Lucas', 'pontuacao': 10},
-        {'texto': 'Ivanildo', 'pontuacao': 1},
-        {'texto': 'Phillipe', 'pontuacao': 1},
+        {'texto': 'Ivanildo', 'pontuacao': 0},
+        {'texto': 'Phillipe', 'pontuacao': 0},
       ],
     },
     {
       'texto': 'Qual foi o professor de Python no SENAI?',
       'respostas': [
-        {'texto': 'Maxuel', 'pontuacao': 1},
-        {'texto': 'Lucas', 'pontuacao': 10},
-        {'texto': 'Ivanildo', 'pontuacao': 1},
-        {'texto': 'Phillipe', 'pontuacao': 1},
+        {'texto': 'Maxuel', 'pontuacao': 0},
+        {'texto': 'Lucas', 'pontuacao': 0},
+        {'texto': 'Ivanildo', 'pontuacao': 10},
+        {'texto': 'Phillipe', 'pontuacao': 0},
       ],
     }
   ];
@@ -69,9 +69,15 @@ class _PerguntaAppState extends State<PerguntaApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: TextTheme(
+          bodyText1: TextStyle(color: Colors.white),
+          bodyText2: TextStyle(color: Colors.white),
+        ),
+      ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Perguntas'),
+          title: const Text('Perguntas SENAI'),
         ),
         body: SizedBox.expand(
           child: Container(
@@ -84,10 +90,14 @@ class _PerguntaAppState extends State<PerguntaApp> {
             child: temPerguntaSelecionada
                 ? DefaultTextStyle(
                     style: TextStyle(color: Colors.white),
-                    child: Questionario(
-                      perguntas: _perguntas,
-                      perguntaSelecionada: _perguntaSelecionada,
-                      quandoResponder: _responder,
+                    child: Padding(
+                      padding: const EdgeInsets.all(
+                          16.0), // Adiciona espaçamento de 16 pixels em todos os lados
+                      child: Questionario(
+                        perguntas: _perguntas,
+                        perguntaSelecionada: _perguntaSelecionada,
+                        quandoResponder: _responder,
+                      ),
                     ),
                   )
                 : Resultado(_pontuacaoTotal, _reiniciarQuestionario),

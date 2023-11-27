@@ -8,7 +8,8 @@ class Resposta extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      margin: EdgeInsets.only(bottom: 8.0),
       width: double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
