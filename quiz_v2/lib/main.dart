@@ -70,9 +70,9 @@ class _PerguntaAppState extends State<PerguntaApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: Colors.white),
-          bodyText2: TextStyle(color: Colors.white),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(color: Colors.white),
+          bodyMedium: TextStyle(color: Colors.white),
         ),
       ),
       home: Scaffold(
@@ -81,7 +81,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
         ),
         body: SizedBox.expand(
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/mountain.jpg'),
                 fit: BoxFit.cover,
@@ -89,10 +89,10 @@ class _PerguntaAppState extends State<PerguntaApp> {
             ),
             child: temPerguntaSelecionada
                 ? DefaultTextStyle(
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                     child: Padding(
                       padding: const EdgeInsets.all(
-                          16.0), // Adiciona espaçamento de 16 pixels em todos os lados
+                          16.0),
                       child: Questionario(
                         perguntas: _perguntas,
                         perguntaSelecionada: _perguntaSelecionada,
@@ -112,6 +112,7 @@ class PerguntaApp extends StatefulWidget {
   const PerguntaApp({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _PerguntaAppState createState() {
     return _PerguntaAppState();
   }

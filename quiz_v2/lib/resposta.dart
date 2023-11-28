@@ -9,11 +9,11 @@ class Resposta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 8.0),
+      margin: const EdgeInsets.only(bottom: 8.0),
       width: double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Color.fromARGB(255, 15, 47, 136),
+          backgroundColor: const Color.fromARGB(255, 15, 47, 136),
           foregroundColor: Colors.white,
         ),
         onPressed: quandoSelecionado,
