@@ -1,25 +1,32 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Calculadora());
+  runApp(const Calculadora());
 }
 
 class Calculadora extends StatelessWidget {
+  const Calculadora({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Text('Aula 5 - Calculadora'),
+          title: const Text('Aula 5 - Calculadora'),
         ),
-        body: CalculadoraHome(),
+        body: const CalculadoraHome(),
       ),
     );
   }
 }
 
 class CalculadoraHome extends StatefulWidget {
+  const CalculadoraHome({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _CalculadoraHomeState createState() => _CalculadoraHomeState();
 }
 
@@ -39,7 +46,10 @@ class _CalculadoraHomeState extends State<CalculadoraHome> {
       num1 = 0.0;
       num2 = 0.0;
       operand = "";
-    } else if (buttonText == "+" || buttonText == "-" || buttonText == "/" || buttonText == "X") {
+    } else if (buttonText == "+" ||
+        buttonText == "-" ||
+        buttonText == "/" ||
+        buttonText == "X") {
       // Configura o primeiro número, operador e reseta _output para o próximo número
       num1 = double.parse(output);
       operand = buttonText;
@@ -47,7 +57,9 @@ class _CalculadoraHomeState extends State<CalculadoraHome> {
     } else if (buttonText == ".") {
       // Adiciona o ponto decimal se ainda não estiver presente
       if (_output.contains(".")) {
-        print("Ele já possuí um decimal");
+        if (kDebugMode) {
+          print("Ele já possuí um decimal");
+        }
         return;
       } else {
         _output = _output + buttonText;
@@ -89,11 +101,13 @@ class _CalculadoraHomeState extends State<CalculadoraHome> {
     return Expanded(
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-          padding: EdgeInsets.all(24.0),
-          side: BorderSide(width: 2, color: Colors.blue),
+          padding: const EdgeInsets.all(40.0),
+          backgroundColor: Colors.white,
+          side: const BorderSide(width: 2, color: Color.fromARGB(255, 0, 59, 187)),
         ),
         child: Text(buttonText,
-            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+            style:
+                const TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
         onPressed: () => buttonPressed(buttonText),
       ),
     );
@@ -102,20 +116,20 @@ class _CalculadoraHomeState extends State<CalculadoraHome> {
   // Função para construir a interface da calculadora
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Column(children: <Widget>[
+    return Column(children: <Widget>[
       // Exibição do resultado
       Container(
           alignment: Alignment.centerRight,
-          padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
+          padding: const EdgeInsets.symmetric(vertical: 34.0, horizontal: 32.0),
           child: Text(output,
-              style: TextStyle(fontSize: 48.0, fontWeight: FontWeight.bold))),
-      
+              style: const TextStyle(
+                  fontSize: 48.0, fontWeight: FontWeight.bold,color: Colors.white,))),
+
       // Linha divisória
-      Expanded(
+      const Expanded(
         child: Divider(),
       ),
-      
+
       // Botões organizados em linhas e colunas
       Column(children: [
         Row(children: [
@@ -147,6 +161,6 @@ class _CalculadoraHomeState extends State<CalculadoraHome> {
           buildButton("="),
         ])
       ])
-    ]));
+    ]);
   }
 }
