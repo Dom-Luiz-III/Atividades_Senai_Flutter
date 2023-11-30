@@ -1,3 +1,3 @@
-# flutter_openmap
+# openmap_v2
 
 A new Flutter project.

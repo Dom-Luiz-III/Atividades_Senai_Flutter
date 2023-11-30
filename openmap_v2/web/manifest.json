@@ -1,6 +1,6 @@
 {
-    "name": "flutter_openmap",
-    "short_name": "flutter_openmap",
+    "name": "openmap_v2",
+    "short_name": "openmap_v2",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
