@@ -101,7 +101,7 @@ class _CalculadoraHomeState extends State<CalculadoraHome> {
     return Expanded(
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-          padding: const EdgeInsets.all(40.0),
+          padding: const EdgeInsets.all(30.0),
           backgroundColor: Colors.white,
           side: const BorderSide(width: 2, color: Color.fromARGB(255, 0, 59, 187)),
         ),
@@ -120,7 +120,7 @@ class _CalculadoraHomeState extends State<CalculadoraHome> {
       // Exibição do resultado
       Container(
           alignment: Alignment.centerRight,
-          padding: const EdgeInsets.symmetric(vertical: 34.0, horizontal: 32.0),
+          padding: const EdgeInsets.symmetric(vertical: 34.0, horizontal: 12.0),
           child: Text(output,
               style: const TextStyle(
                   fontSize: 48.0, fontWeight: FontWeight.bold,color: Colors.white,))),

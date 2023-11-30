@@ -83,7 +83,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
           child: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/mountain.jpg'),
+                image: AssetImage('assets/images/mountain.png'),
                 fit: BoxFit.cover,
               ),
             ),
