@@ -39,11 +39,47 @@ class _PerguntaAppState extends State<PerguntaApp> {
       'texto': 'Qual foi o professor de Python no SENAI?',
       'respostas': [
         {'texto': 'Maxuel', 'pontuacao': 0},
-        {'texto': 'Lucas', 'pontuacao': 0},
-        {'texto': 'Ivanildo', 'pontuacao': 10},
+        {'texto': 'Lucas', 'pontuacao': 10},
+        {'texto': 'Ivanildo', 'pontuacao': 0},
         {'texto': 'Phillipe', 'pontuacao': 0},
       ],
-    }
+    },
+        {
+      'texto': 'Qual foi o professora de MySQL no SENAI?',
+      'respostas': [
+        {'texto': 'Ingrid', 'pontuacao': 0},
+        {'texto': 'Thaiany', 'pontuacao': 10},
+        {'texto': 'Sandrinha', 'pontuacao': 0},
+        {'texto': 'Jéssica', 'pontuacao': 0},
+      ],
+    },
+    {
+      'texto': 'Qual a marca do robô cachorro que o SENAI CIMATEC tem?',
+      'respostas': [
+        {'texto': 'Samsung', 'pontuacao': 0},
+        {'texto': 'Xiaomi', 'pontuacao': 0},
+        {'texto': 'Unitree', 'pontuacao': 10},
+        {'texto': 'Boston Dynamics', 'pontuacao': 0},
+      ],
+    },
+    {
+      'texto': 'Em que ano o SENAI foi fundado?',
+      'respostas': [
+        {'texto': '1964', 'pontuacao': 0},
+        {'texto': '1942', 'pontuacao': 10},
+        {'texto': '1987', 'pontuacao': 0},
+        {'texto': '2002', 'pontuacao': 0},
+      ],
+    },
+    {
+      'texto': 'Que tipo de instituição o SENAI é?',
+      'respostas': [
+        {'texto': 'Organização não governamental', 'pontuacao': 0},
+        {'texto': 'Pública estatal', 'pontuacao': 0},
+        {'texto': 'Privada de capital aberto', 'pontuacao': 0},
+        {'texto': 'Privada de interesse público', 'pontuacao': 10},
+      ],
+    },
   ];
 
   void _responder(int pontuacao) {
